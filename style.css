@@ -29,11 +29,12 @@ p a {
 }
 
 #header {
-    background-image: url();
-    background-repeat: no-repeat;
+    height: 600px;
+    background: url('images/deer.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
-    height: 800px;
-    width: 100%;
 }
 
 .tp {
@@ -87,34 +88,48 @@ p a {
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     padding: 15px 0px;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
 }
 
 .container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    position: relative;
+    padding-top: 50px;
+    background-color: rgb(243, 239, 232);
 }
 
 h1 {
     font-family: 'Open Sans', 'Arial', sans-serif;
     text-transform: uppercase;
     text-align: center;
-    font-size: 2em;
-    border-bottom: 2px solid pink;
+    font-size: 100px;
+    color: rgb(253, 253, 253);
 }
 
-img {
-    width: 450px;
-    height: 300px;
-    margin: 8px;
-    background-color: rgba(122, 122, 122, 1);
-    opacity: 0.5;
-    transition: 0.5s ease-in-out;
-    -moz-transition: 0.5s ease-in-out;
-    -webkit-transition: 0.5s ease-in-out;
+#title {
+    margin: 0 auto;
+    position: fixed;
+    top: 30px;
+    right: 80px;
 }
 
-img:hover {
+#sidet {
+    margin: 0 auto;
+    position: fixed;
+    top: 210px;
+    right: 90px;
+    text-align: right;
+    font-size: 22px;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(253, 253, 253);
+    text-transform: uppercase;
+}
+
+.smallimg:hover {
     color: rgba(255, 255, 255, 0);
     opacity: 1;
     transition: 0.5s ease-in-out;
@@ -122,8 +137,39 @@ img:hover {
     -webkit-transition: 0.5s ease-in-out;
 }
 
-#title {
+.smallimg {
     width: 400px;
-    height: fit-content;
-    margin: 0 auto;
+    height: 250px;
+    margin: 8px;
+    background-color: rgba(122, 122, 122, 1);
+    opacity: 0.7;
+    transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -webkit-transition: 0.5s ease-in-out;
 }
+
+
+#overlay {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+  }
+
+  #modal {
+    position:absolute;
+    background:url(tint20.png) 0 0 repeat;
+    background:rgba(0,0,0,0.2);
+    border-radius:14px;
+    padding:8px;
+  }
+  
+  #content {
+    border-radius:8px;
+    background:#fff;
+    padding:20px;
+  }
