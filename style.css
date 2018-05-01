@@ -35,6 +35,7 @@ p a {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    display: flex;
 }
 
 .tp {
@@ -93,6 +94,17 @@ p a {
     -webkit-user-select: none;
 }
 
+#ano {
+    font-size: 9px; 
+    margin: 0px;
+}
+
+#link {
+    font-size: 14px;
+    margin-top: -32px; 
+    margin-left: 90%;
+}
+
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -105,7 +117,6 @@ p a {
 h1 {
     font-family: 'Open Sans', 'Arial', sans-serif;
     text-transform: uppercase;
-    text-align: center;
     font-size: 100px;
     color: rgb(253, 253, 253);
 }
@@ -129,17 +140,10 @@ h1 {
     text-transform: uppercase;
 }
 
-.smallimg:hover {
-    color: rgba(255, 255, 255, 0);
-    opacity: 1;
-    transition: 0.5s ease-in-out;
-    -moz-transition: 0.5s ease-in-out;
-    -webkit-transition: 0.5s ease-in-out;
-}
-
 .smallimg {
     width: 400px;
     height: 250px;
+    max-width: 100%;
     margin: 8px;
     background-color: rgba(122, 122, 122, 1);
     opacity: 0.7;
@@ -148,28 +152,80 @@ h1 {
     -webkit-transition: 0.5s ease-in-out;
 }
 
+.smallimg:hover {
+    color: rgba(255, 255, 255, 0);
+    opacity: 1;
+    transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -webkit-transition: 0.5s ease-in-out;
+}
 
-#overlay {
-    position: fixed; 
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #000;
-    opacity: 0.5;
-    filter: alpha(opacity=50);
-  }
+@media screen and (min-width: 2500px) {
+    /* applies only if the screen is wider than 2500px */
+      #header {
+        min-height: 1200px;
+      }
+      #sidet {
+          font-size: 2vh;
+          margin: 2vw;
+          top: 18vh;
+          right: 0vh;
+      }
+      #blackbar {
+        height: 30px;
+      }
+      .tp .balloon {
+          font-size: 2vh;
+          width: 16vh;
+          margin-left: -7vh;
+      }
+      #footer{
+        font-size: 2vh;
+      }
+      #link {
+            font-size: 2vh;
+            margin-top: -5vh;
+      }
+      #ano {
+        font-size: 2vh;
+      }
+      .smallimg {
+          height: 750px;
+          width: 1200px;
+      }
+      #title {
+        margin: 2vw;
+        top: 0vw;
+        right: 0vw;
+      }
+      h1 {
+        font-size: 10vh;
+        text-align: right;
+      }
+    }
 
-  #modal {
-    position:absolute;
-    background:url(tint20.png) 0 0 repeat;
-    background:rgba(0,0,0,0.2);
-    border-radius:14px;
-    padding:8px;
-  }
-  
-  #content {
-    border-radius:8px;
-    background:#fff;
-    padding:20px;
-  }
+@media screen and (max-width: 600px) {
+    /* applies only if the screen is narrower than 600px */
+      body {
+          overflow-x: hidden; 
+        }
+      #header {
+        position: static;
+        max-height: 90%;
+      }
+      #sidet {
+          font-size: 2vh;
+          margin: 2vw;
+          top: 34vh;
+          right: 2vh;
+      }
+      #title {
+        margin: 2vw;
+        top: 0vw;
+        right: 2vw;
+      }
+      h1 {
+        font-size: 10vh;
+        text-align: right;
+      }
+    }
