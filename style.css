@@ -209,10 +209,17 @@ h1 {
       body {
           overflow-x: hidden; 
         }
-      #header {
-        position: static;
-        max-height: 90%;
-      }
+       #header::before {
+            content: "";
+            display: block;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            max-height: 90%;
+            z-index: -10;
+        }
+
       #sidet {
           font-size: 2vh;
           margin: 2vw;
